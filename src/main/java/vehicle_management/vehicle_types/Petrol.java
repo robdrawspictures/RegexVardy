@@ -9,8 +9,8 @@ public class Petrol extends Vehicle implements IStart {
 
     private FuelTank fuelTank;
 
-    public Petrol(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, FuelTank fuelTank) {
-        super(model, make, colour, doors, engine, tyre, price);
+    public Petrol(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, double damage, FuelTank fuelTank) {
+        super(model, make, colour, doors, engine, tyre, price, damage);
         this.fuelTank = fuelTank;
     }
 

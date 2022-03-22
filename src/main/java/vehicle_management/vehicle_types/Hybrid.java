@@ -11,8 +11,8 @@ public class Hybrid extends Vehicle implements IStart {
     private Battery battery;
     private FuelTank fuelTank;
 
-    public Hybrid(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, Battery battery, FuelTank fuelTank) {
-        super(model, make, colour, doors, engine, tyre, price);
+    public Hybrid(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, double damage, Battery battery, FuelTank fuelTank) {
+        super(model, make, colour, doors, engine, tyre, price, damage);
         this.battery = battery;
         this.fuelTank = fuelTank;
     }

@@ -9,8 +9,8 @@ public class Electric extends Vehicle implements IStart {
 
     private Battery battery;
 
-    public Electric(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, Battery battery) {
-        super(model, make, colour, doors, engine, tyre, price);
+    public Electric(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, double damage, Battery battery) {
+        super(model, make, colour, doors, engine, tyre, price, damage);
         this.battery = battery;
     }
 

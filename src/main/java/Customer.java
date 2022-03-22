@@ -9,7 +9,7 @@ public class Customer {
 
     public Customer(double money, ArrayList<Vehicle> garage) {
         this.money = money;
-        this.garage = garage;
+        this.garage = new ArrayList<>();
     }
 
     public double getMoney() {
@@ -26,5 +26,20 @@ public class Customer {
 
     public void setGarage(ArrayList<Vehicle> garage) {
         this.garage = garage;
+    }
+
+    public int getGarageSize() {
+        return this.garage.size();
+    }
+
+    public void addVehicle(Vehicle vehicle) {
+        this.garage.add(vehicle);
+    }
+
+    public void buyVehicle(Vehicle vehicle) {
+        if(money >= vehicle.getPrice()){
+            this.garage.add(vehicle);
+            money -= vehicle.getPrice();
+        }
     }
 }

@@ -12,8 +12,9 @@ abstract public class Vehicle {
     private Engine engine;
     private Tyre tyre;
     private double price;
+    private double damage;
 
-    public Vehicle(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price) {
+    public Vehicle(String model, String make, String colour, int doors, Engine engine, Tyre tyre, double price, double damage) {
         this.model = model;
         this.make = make;
         this.colour = colour;
@@ -21,6 +22,7 @@ abstract public class Vehicle {
         this.engine = engine;
         this.tyre = tyre;
         this.price = price;
+        this.damage = damage;
     }
 
     public String getModel() {
@@ -77,5 +79,11 @@ abstract public class Vehicle {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void deductDamage(){
+        double discount = (damage / 100) * price;
+        double newPrice = price - discount;
+        setPrice(newPrice);
     }
 }
